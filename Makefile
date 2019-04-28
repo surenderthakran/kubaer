@@ -7,7 +7,7 @@ ifdef DOCKER
 	@$(MAKE) prep_install
 	@$(MAKE) prep_compile
 	@$(MAKE) compile
-	@$(MAKE) build`
+	@$(MAKE) build
 else
 	@echo \"make install\" will only work inside docker!!!
 endif
@@ -15,7 +15,7 @@ endif
 run:
 ifdef DOCKER
 	@echo -e "\n...Running $(PROJECT_NAME)..."
-	java -Dfile.encoding=UTF-8 -cp "classes:lib/*" com.surenderthakran.kubaer.api.App
+	java -Dfile.encoding=UTF-8 -cp "classes:src/resources/*" com.surenderthakran.kubaer.api.App
 else
 	@echo \"make run\" will only work inside docker!!!
 endif
@@ -31,7 +31,7 @@ prep_compile:
 
 compile:
 	@echo -e "\n...Compiling $(PROJECT_NAME)..."
-	javac -Xdiags:verbose -Xlint:unchecked -classpath "lib/*" -d classes @sources.txt
+	javac -Xdiags:verbose -Xlint:unchecked -classpath "src/resources/*" -d classes @sources.txt
 
 build:
 	@echo -e "\n...Building $(PROJECT_NAME)..."
