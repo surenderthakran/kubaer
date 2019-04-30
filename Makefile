@@ -15,23 +15,23 @@ endif
 run:
 ifdef DOCKER
 	@echo -e "\n...Running $(PROJECT_NAME)..."
-	java -Dfile.encoding=UTF-8 -cp "classes:src/resources/*" com.surenderthakran.kubaer.api.App
+	java -Dfile.encoding=UTF-8 -cp "target/classes:src/resources/*" com.surenderthakran.kubaer.api.App
 else
 	@echo \"make run\" will only work inside docker!!!
 endif
 
 prep_install:
 	@echo -e "\n...Preparing to install $(PROJECT_NAME)..."
-	@mkdir -p classes
+	@mkdir -p target/classes
 
 prep_compile:
 	@echo -e "\n...Preparing to compile $(PROJECT_NAME)..."
-	@rm -rf classes/*
+	@rm -rf target/classes/*
 	find -name "*.java" > sources.txt
 
 compile:
 	@echo -e "\n...Compiling $(PROJECT_NAME)..."
-	javac -Xdiags:verbose -Xlint:unchecked -classpath "src/resources/*" -d classes @sources.txt
+	javac -Xdiags:verbose -Xlint:unchecked -classpath "src/resources/*" -d target/classes @sources.txt
 
 build:
 	@echo -e "\n...Building $(PROJECT_NAME)..."
