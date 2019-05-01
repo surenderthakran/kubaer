@@ -1,7 +1,11 @@
 package com.surenderthakran.kubaer.api;
 
+import com.google.common.flogger.FluentLogger;
+
 class App {
+  private static final FluentLogger logger = FluentLogger.forEnclosingClass();
+
   public static void main(String[] args) {
-    System.out.println("Hello World!");
+    logger.atInfo().log("Hello World!");
   }
 }
