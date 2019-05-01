@@ -14,7 +14,8 @@ ARG PROJECT_ROOT_DIR="/home"
 RUN apk add --no-cache \
     bash \
     curl \
-    tar
+    tar \
+    tzdata
 
 # Install maven.
 RUN mkdir -p /usr/local/maven \
