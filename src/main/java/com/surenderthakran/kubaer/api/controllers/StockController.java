@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-class GetStockBySymbolController {
+class StockController {
 
   @RequestMapping("/getstockbysymbol")
   Stock getStockBySymbol(@RequestParam(value="symbol") String symbol) {
