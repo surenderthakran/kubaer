@@ -8,4 +8,12 @@ public class Stock {
     this.symbol = symbol;
     this.name = name;
   }
+
+  public String getSymbol() {
+    return symbol;
+  }
+
+  public String getName() {
+    return name;
+  }
 }
