@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-class App {
+public class App {
   private static final FluentLogger logger = FluentLogger.forEnclosingClass();
 
   public static void main(String[] args) {
