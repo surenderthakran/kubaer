@@ -1,8 +1,8 @@
 package com.surenderthakran.kubaer.common.types;
 
 public class Stock {
-  private final String symbol;
-  private final String name;
+  private String symbol;
+  private String name;
 
   public Stock(String symbol, String name) {
     this.symbol = symbol;
@@ -13,7 +13,15 @@ public class Stock {
     return symbol;
   }
 
+  public void setSymbol(String symbol) {
+    this.symbol = symbol;
+  }
+
   public String getName() {
     return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 }
