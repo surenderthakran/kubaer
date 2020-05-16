@@ -36,6 +36,7 @@
   </build>
 
   <dependencies>
+    <!-- Flogger -->
     <dependency>
       <groupId>com.google.flogger</groupId>
       <artifactId>flogger</artifactId>
@@ -48,10 +49,18 @@
       <version>0.4</version>
       <scope>compile</scope>
     </dependency>
+
+    <!-- Spring Boot -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
       <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongo-java-driver</artifactId>
+      <version>3.10.2</version>
     </dependency>
   </dependencies>
 </project>
